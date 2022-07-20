@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/kanban-board.css">
+     <link rel="stylesheet" href="./css/button.css">
+    <link rel="shortcut icon" href="./assets/trellologo.png" type="image/x-icon">
+    <title>Kanban App</title>
+</head>
+
+<body class="l-app" id="app">
+    <script src="./assets/index.js"></script>
+    <!-- Header-->
+    <header class="header-app">
+        <div class="l-container">
+            <img class="logo" src="./assets/trellologo.png" alt="Logo Kanban App" height="100" width="150">
+            <div class="h2"><h2>Tablero de tareas</h2></div>
+        </div>
+        <br>
+    </header>
+    <!-- fin header-->
+
+    <!-- Columnas canvas-->
+    <main class="main-app">
+    
+        <div class="l-container">
+            <!-- Por hacer-->
+            <div class="section-app" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)" >
+                <h2 class="h2"> Por hacer</h2>
+                    <div class="task-button-block">
+                    </div>
+                    <div class="task" id="task1" draggable="true" ondragstart="drag(event)">
+                        <span>Tarea 1</span>
+                    </div>
+                    <div class="task" id="task2" draggable="true" ondragstart="drag(event)">
+                        <span>Tarea 2</span>
+                    </div>
+                    <div class="task" id="task3" draggable="true" ondragstart="drag(event)">
+                        <span>Tarea 3</span>
+                    </div>
+                    <div class="task" id="task4" draggable="true" ondragstart="drag(event)">
+                        <span>Tarea 4</span>
+                    </div>
+                    <div class="task" id="task5" draggable="true" ondragstart="drag(event)">
+                        <span>Tarea 5</span>
+                    </div>
+                    <div class="task" id="task6" draggable="true" ondragstart="drag(event)">
+                        <span>Tarea 6</span>
+                    </div>
+                </div>
+            <!-- fin por hacer-->
+            <!-- Progreso-->
+            <section class="section-app" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2 class="h2"> En Progreso</h2>
+            </section>
+            <!-- fin Progreso-->
+            <!-- Finalizada-->
+            <section class="section-app" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2 class="h2"> Finalizadas</h2>
+            </section>
+            <!-- fin por hacer-->
+            
+        </div>
+    </main>
+    <!-- Fin columnas-->
+    <!-- Aside Crear Nueva tarea -->
+    
+    <aside class="aside-app">
+        <div class="l-container">
+            <div class="form-container">
+                <h2 class="h2">Nueva tarea</h2>
+                <button class="button button-primary" id="btnNewTask" onclick="createTask()">Crear Nueva tarea</button>
+                <form class="create-new-task-block" id="create-new-task-block">
+                    <!-- Titulo-->
+                    <div class="row-form">
+                        <label for="TitleTask" class="form-newtask_label" id="task-name">Titulo de Tarea</label>
+                        <input type="TitleTask" name="task-name"  class="form-new-task_input" id="task-name" placeholder="Escribe Un titulo para la tarea">
+                    </div>
+                    <!-- fin titulo-->
+
+                    <!-- Responsable-->
+                    <div class="form-new-task">
+                        <label for="task-name1" class="form-new-task_label">Responsable: </label>
+                        <select name="task-description" id="task-description">
+                            <option value="">--Selecionar</option>
+                            <option value="User01">Usuario 1</option>
+                            <option value="User02">Usuario 2</option>
+                            
+                        </select>
+                    </div>
+                    <!-- fin responsable-->
+                    
+                    <!-- input deadline-->
+                    <div class="form-new-task">
+                        <label for="task-name2" class="form-new-task_label">Plazo de Entrega: </label>
+                        <select name="task-status" id="task-days">
+                            <option value="">--Selecionar</option>
+                            <option value="Dia1">Dia 1</option>
+                            <option value="Dia2">Dia 2</option>
+                            <option value="1semana">1 Semana</option>
+                        </select>
+                    </div>
+                    <div class="form-new-task">
+                        <label class="form-row-label" for="task-name3">Status</label>
+                        <select class="form-row-input" name="task-status" id="task-status">
+                            <option value="todo">To Do</option>
+                            <option value="inprogress">In Progress</option>
+                            <option value="done">Done</option>
+                        </select>
+                    </div>
+                    <!-- Fin deadline-->
+
+                    <!-- Botones -->
+                    <div>
+                            <button  class="button button-primary" id="save-button" onclick="saveTask()" >Guardar</button>       
+                            <button  class="disabled" id="cancel-button" onclick="createTask()">Cancelar</button>
+                    </div>
+                    <!-- Fin botones -->
+                </form>
+            </div>
+        </div>
+    </aside>
+    
+</body>
+
+</html>

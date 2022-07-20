@@ -1,0 +1,105 @@
+Body {
+  background-image: url(https://fondosmil.com/fondo/52740.jpg);
+  font-family:Monaco,Georgia,Times,serif;
+}
+
+h2 {
+  font-style:italic;
+  font-weight:bold;
+  font-size: 1.5em;
+  font-family:'Helvetica','Verdana','Monaco',sans-serif;
+}
+
+.l-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: sans-serif;
+  }
+  
+.section-app {
+    padding: 0.6rem;
+    width: 30.5%;
+    min-width: 14rem;
+    min-height: 20rem;
+    border-radius: 0.4rem;
+  }
+  
+  .task {
+    background-color: white;
+    margin: 0.2rem 0rem 0.3rem 0rem;
+    border: 0.1rem solid black;
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.2rem 0.5rem 2rem;
+  }
+    
+  
+  
+  .create-new-task-block {
+    display: none;
+    /* display: flex; */
+    width: 200px;
+    flex-direction: column;
+  }
+  
+  .create-new-task-block {
+    padding: 0.6rem;
+    width: 80%;
+    min-width: 14rem;
+    min-height: 4.5rem;
+    border-radius: 0.3rem;
+  }
+  
+  
+  #todo {
+    background-color: #fa0234;
+  }
+  
+  #inprogress {
+    background-color: #dbcd06;
+  }
+  
+  #done {
+    background-color: #018b01;
+  }
+
+  .aside-app {
+    width: 600px;
+    margin: 20px auto;
+    
+  }
+  .row-form {
+    margin: 10px 0;
+    font: oblique bold 110% cursive;
+    
+  }
+.form-new-task_input{
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 4px;
+}
+
+input[type="Titletask"]{
+    width: 200%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+select {
+    width: 200%;
+    background-color: #fffbfb;
+    color: rgb(10, 10, 10);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+
+  textarea {
+    resize: none;
+  }
