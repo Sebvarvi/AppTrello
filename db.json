@@ -1,5 +1,5 @@
 {
-    "Taks": [
+    "task": [
       {
         "id": 1,
         "Title": "Frontend",
@@ -15,8 +15,8 @@
         "state": "done",
         "deadline": 37.880273,
         "created": -4.792098
-      },
-          ],
+      }
+          ]
   }
 
   
